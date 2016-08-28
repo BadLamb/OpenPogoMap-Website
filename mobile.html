@@ -1,0 +1,52 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>OpenPokeMap - Gotta Track'em all</title>
+        <meta name="description" content="OpenPokeMap is the first Pokemon Go map that shares data.">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="icon" type="image/png" href="https://openpokemap.pw/favicon.png">
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <!--Material stuff!-->
+        <link rel="stylesheet" href="static/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Map!-->
+        <link rel="stylesheet" href="static/leaflet.css"/>
+        <script src="static/leaflet.js"></script>
+        <div class="map" id="map"></div>
+        <script src="static/app_mobile.js"></script>
+
+        <div id="settings-modal" class="modal">
+            <div class="modal-content">
+                <h4>Settings</h4>
+                <p>Filters</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Save</a>
+                <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Exit</a>
+            </div>
+        </div>
+        <div class="fixed-action-btn horizontal click-to-toggle" style="bottom: 4vh; right: 2vh;">
+            <a class="btn-floating btn-large red">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul>
+                <li><a class="btn-floating red" href="#settings-modal" id="settings-trigger"><i class="material-icons">settings</i></a></li>
+                <li><a class="btn-floating yellow darken-1" onclick="find_pos()"><i class="material-icons" onclick="find_pos()">my_location</i></a></li>
+                <li><a class="btn-floating green"><i class="material-icons">replay</i></a></li>
+            </ul>
+        </div>
+    </body>
+</html>
